@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('Checkout Code') {
             steps {
-                git credentialsId: 'github-cred', url: 'YOUR_REPO_URL'
+                git credentialsId: 'github-cred', url: 'https://github.com/Abhilash4Devops/DevOps-demo.git'
             }
         }
         
