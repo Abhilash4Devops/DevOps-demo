@@ -13,6 +13,7 @@ pipeline {
                 bat 'docker build -t devops-demo-app .'
             }
         }
+        
         stage('Run Docker Container') {
             steps {
                 bat 'docker run -d -p 3000:3000 --name demo-app devops-demo-app || ver > nul'
