@@ -10,13 +10,13 @@ pipeline {
         
         stage('Build Docker Image') {
             steps {
-                sh 'docker build -t devops-demo-app .'
+                bat 'docker build -t devops-demo-app .'
             }
         }
 
         stage('Run Docker Container') {
             steps {
-                sh 'docker run -d -p 3000:3000 --name demo-app devops-demo-app || true'
+                bat 'docker run -d -p 3000:3000 --name demo-app devops-demo-app || ver > nul'
             }
         }
     }
