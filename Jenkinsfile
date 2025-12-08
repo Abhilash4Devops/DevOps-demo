@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('Checkout Code') {
             steps {
-                git credentialsId: 'github-cred', url: 'https://github.com/Abhilash4Devops/DevOps-demo.git'
+                git branch: 'main', credentialsId: 'github-cred', url: 'https://github.com/Abhilash4Devops/DevOps-demo.git'
             }
         }
         
